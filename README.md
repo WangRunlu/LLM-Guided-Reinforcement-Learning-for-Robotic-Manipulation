@@ -10,7 +10,7 @@ Pick up and lift a single cube in the ManiSkill2 simulator >80 % of test runs, w
 ## Steps
 1. **Setup**  
   
-# install the package
+
 pip install --upgrade mani_skill
-# install a version of torch that is compatible with your system
+
 pip install torch
