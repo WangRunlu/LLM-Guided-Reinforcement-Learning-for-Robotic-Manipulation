@@ -1,19 +1,14 @@
-# LLM-Guided-Reinforcement-Learning-for-Robotic-Manipulation
-Description
+# LLM-Guided Reinforcement Learning for Robotic Manipulation
 
-This project combines a Large Language Model (LLM) and Reinforcement Learning (RL) to control a robotic arm for block grasping tasks in simulation. The LLM generates structured actions, and RL refines them over repeated trials.
+## Description
+A minimal proof-of-concept that pairs a large language model (LLM) with reinforcement learning (RL) to control a 6-DOF robotic arm in simulation.  
+The LLM proposes either joint commands or end-effector poses; RL then refines these actions via trial-and-error rewards.
 
-How to Run
+## Goal
+Pick up and lift a single cube in the ManiSkill2 simulator >80 % of test runs, while keeping the controller fully interpretable (LLM prompts + rewards).
 
-
-Steps
-	•	Install dependencies (ManiSkill2, PyTorch, OpenAI API if needed).
-	•	Launch the simulation and collect state data.
-	•	Query the LLM for initial action plans.
-	•	Apply RL fine-tuning using reward feedback.
-	•	Log training results and analyze performance.
-
-Deliverables
-	•	Trained LLM + RL robotic arm policy.
-	•	Grasping success evaluation under varied conditions.
-	•	Final report with methods, experiments, and results.
+## Steps
+1. **Setup**  
+   ```bash
+   conda env create -f env.yml        # install PyTorch + ManiSkill2 etc.
+   conda activate llm-rl
